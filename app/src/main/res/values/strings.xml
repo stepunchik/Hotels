@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Hotels</string>
+    <string name="sign_up_screen_title">Регистрация</string>
+    <string name="sign_in_screen_title">Вход</string>
+    <string name="login_hint">Введите почту</string>
+    <string name="surname_hint">Введите фамилию</string>
+    <string name="name_hint">Введите имя</string>
+    <string name="password_hint">Введите пароль</string>
+    <string name="confirm_password_hint">Подтвердите пароль</string>
+    <string name="submit_registration_button_text">Зарегистрироваться</string>
+    <string name="to_sign_in_text">Уже есть аккаунт? Войти</string>
+    <string name="submit_sign_in_button_text">Войти</string>
+    <string name="to_sign_up_text">Еще нет аккаунта? Зарегистрироваться</string>
+    <string name="sign_out_button_text">Выйти</string>
+</resources>

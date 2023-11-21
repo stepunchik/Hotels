@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "99834553093",
+    "project_id": "hotelsmad",
+    "storage_bucket": "hotelsmad.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:99834553093:android:bc98a73d75f61a11d00d6c",
+        "android_client_info": {
+          "package_name": "ru.startandroid.hotels"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD94KXYD7AiwCtgN9GbTUDOUPMPKZsbgwA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

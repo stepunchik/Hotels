@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignInActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/activity_sign_in__guideLine1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="40dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/activity_sign_in__guideLine2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="40dp" />
+
+    <TextView
+        android:id="@+id/activity_sign_in__text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="@string/sign_in_screen_title"
+        android:textSize="25sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/activity_sign_in__Login"
+        app:layout_constraintStart_toStartOf="@+id/activity_sign_in__guideLine1"
+        app:layout_constraintEnd_toEndOf="@+id/activity_sign_in__guideLine2"
+        app:layout_constraintVertical_chainStyle="packed"/>
+
+    <EditText
+        android:id="@+id/activity_sign_in__Login"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:layout_marginBottom="10dp"
+        android:hint="@string/login_hint"
+        android:autofillHints="emailAddress"
+        android:textColor="@color/black"
+        android:maxLength="30"
+        android:padding="10dp"
+        android:background="@drawable/custom_input"
+        app:layout_constraintTop_toBottomOf="@id/activity_sign_in__text"
+        app:layout_constraintBottom_toTopOf="@id/activity_sign_in__Password"
+        app:layout_constraintStart_toStartOf="@+id/activity_sign_in__guideLine1"
+        app:layout_constraintEnd_toEndOf="@+id/activity_sign_in__guideLine2" />
+
+    <EditText
+        android:id="@+id/activity_sign_in__Password"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:layout_marginBottom="10dp"
+        android:hint="@string/password_hint"
+        android:autofillHints="password"
+        android:textColor="@color/black"
+        android:maxLength="50"
+        android:padding="10dp"
+        android:background="@drawable/custom_input"
+        app:layout_constraintTop_toBottomOf="@id/activity_sign_in__Login"
+        app:layout_constraintBottom_toTopOf="@id/activity_sign_in__submitEnterButton"
+        app:layout_constraintStart_toStartOf="@+id/activity_sign_in__guideLine1"
+        app:layout_constraintEnd_toEndOf="@+id/activity_sign_in__guideLine2" />
+
+    <Button
+        android:id="@+id/activity_sign_in__submitEnterButton"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/submit_sign_in_button_text"
+        android:layout_marginBottom="70dp"
+        app:layout_constraintBottom_toTopOf="@+id/activity_sign_in__toSignUpActivity"
+        app:layout_constraintEnd_toEndOf="@+id/activity_sign_in__guideLine2"
+        app:layout_constraintStart_toStartOf="@+id/activity_sign_in__guideLine1"
+        app:layout_constraintTop_toBottomOf="@id/activity_sign_in__Password" />
+
+    <TextView
+        android:id="@+id/activity_sign_in__toSignUpActivity"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/to_sign_up_text"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activity_sign_in__submitEnterButton"
+        app:layout_constraintStart_toStartOf="@+id/activity_sign_in__guideLine1"
+        app:layout_constraintEnd_toEndOf="@+id/activity_sign_in__guideLine2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
