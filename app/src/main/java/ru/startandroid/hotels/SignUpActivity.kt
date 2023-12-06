@@ -1,8 +1,11 @@
 package ru.startandroid.hotels
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.view.inputmethod.InputMethodManager
+import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
@@ -26,9 +29,13 @@ class SignUpActivity : AppCompatActivity() {
         firebaseAuth = FirebaseAuth.getInstance()
 
         binding.activitySignUpToSignInActivity.setOnClickListener {
-            val intent = Intent(this, SignInActivity::class.java)
+            val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
             finish()
+        }
+
+        binding.activitySignUpLayout.setOnClickListener {
+            closeKeyboard(binding.activitySignUpLayout)
         }
 
         binding.activitySignUpSubmitRegistrationButton.setOnClickListener {
@@ -50,11 +57,14 @@ class SignUpActivity : AppCompatActivity() {
                                 is FirebaseAuthUserCollisionException -> {
                                     Toast.makeText(applicationContext, "Пользователь с таким именем уже существует", Toast.LENGTH_SHORT).show()
                                 }
-                                is FirebaseAuthInvalidCredentialsException -> {
-                                    Toast.makeText(applicationContext, "Невозможно создать пользователя с такими данными", Toast.LENGTH_SHORT).show()
-                                }
                                 is FirebaseAuthWeakPasswordException -> {
-                                    Toast.makeText(applicationContext, "Пароль должен содержать минимум 6 символов", Toast.LENGTH_SHORT).show()
+                                    Toast.makeText(applicationContext, "Пароль слишком простой", Toast.LENGTH_SHORT).show()
+                                }
+                                is FirebaseAuthInvalidCredentialsException -> {
+                                    Toast.makeText(applicationContext, "Недопустимый формат почты", Toast.LENGTH_SHORT).show()
+                                }
+                                else -> {
+                                    Toast.makeText(applicationContext, "Недопустимые данные", Toast.LENGTH_SHORT).show()
                                 }
                             }
                         }
@@ -68,5 +78,10 @@ class SignUpActivity : AppCompatActivity() {
                 Toast.makeText(this, "Пожалуйста, заполните все поля", Toast.LENGTH_SHORT).show()
             }
         }
+    }
+
+    private fun closeKeyboard(view: View) {
+        val imm = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+        imm.hideSoftInputFromWindow(view.windowToken, 0)
     }
 }
