@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/activity_sign_up__layout"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -30,68 +31,84 @@
         android:text="@string/sign_up_screen_title"
         android:textSize="25sp"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/activity_sign_up__Login"
+        app:layout_constraintBottom_toTopOf="@id/activity_sign_up__login"
         app:layout_constraintStart_toStartOf="@+id/activity_sign_up__guideLine1"
         app:layout_constraintEnd_toEndOf="@+id/activity_sign_up__guideLine2"
         app:layout_constraintVertical_chainStyle="packed" />
 
-
     <EditText
-        android:id="@+id/activity_sign_up__Login"
+        android:id="@+id/activity_sign_up__login"
         android:minWidth="48dp"
         android:minHeight="48dp"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:layout_marginBottom="10dp"
+        android:layout_height="60dp"
+        android:inputType="textEmailAddress"
         android:hint="@string/login_hint"
         android:autofillHints="emailAddress"
         android:textColor="@color/black"
+        android:textColorHint="@color/light_gray"
         android:maxLength="30"
-        android:padding="10dp"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:layout_marginBottom="10dp"
         android:background="@drawable/custom_input"
         app:layout_constraintTop_toBottomOf="@id/activity_sign_up__text"
-        app:layout_constraintBottom_toTopOf="@id/activity_sign_up__Password"
+        app:layout_constraintBottom_toTopOf="@id/activity_sign_up__passwordLayout"
         app:layout_constraintStart_toStartOf="@+id/activity_sign_up__guideLine1"
         app:layout_constraintEnd_toEndOf="@+id/activity_sign_up__guideLine2" />
 
-    <EditText
-        android:id="@+id/activity_sign_up__Password"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/activity_sign_up__passwordLayout"
         android:minWidth="48dp"
         android:minHeight="48dp"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:inputType="textPassword"
-        android:layout_marginBottom="10dp"
-        android:hint="@string/password_hint"
-        android:autofillHints="password"
-        android:textColor="@color/black"
-        android:maxLength="50"
-        android:padding="10dp"
-        android:background="@drawable/custom_input"
-        app:layout_constraintTop_toBottomOf="@id/activity_sign_up__Login"
-        app:layout_constraintBottom_toTopOf="@id/activity_sign_up__ConfirmPassword"
-        app:layout_constraintStart_toStartOf="@+id/activity_sign_up__guideLine1"
-        app:layout_constraintEnd_toEndOf="@+id/activity_sign_up__guideLine2" />
+        app:hintEnabled="false"
+        app:layout_constraintTop_toBottomOf="@+id/activity_sign_up__login"
+        app:layout_constraintBottom_toTopOf="@id/activity_sign_up__confirmPasswordLayout"
+        app:layout_constraintStart_toStartOf="@id/activity_sign_up__guideLine1"
+        app:layout_constraintEnd_toEndOf="@id/activity_sign_up__guideLine2"
+        app:passwordToggleEnabled="true">
 
-    <EditText
-        android:id="@+id/activity_sign_up__ConfirmPassword"
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/activity_sign_up__password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/light_gray"
+            android:maxLength="50"
+            android:background="@drawable/custom_input"
+            android:hint="@string/password_hint"
+            android:inputType="textPassword" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/activity_sign_up__confirmPasswordLayout"
         android:minWidth="48dp"
         android:minHeight="48dp"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:inputType="textPassword"
-        android:layout_marginBottom="20dp"
-        android:hint="@string/confirm_password_hint"
-        android:autofillHints="password"
-        android:textColor="@color/black"
-        android:maxLength="50"
-        android:padding="10dp"
-        android:background="@drawable/custom_input"
-        app:layout_constraintTop_toBottomOf="@id/activity_sign_up__Password"
+        app:hintEnabled="false"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/activity_sign_up__passwordLayout"
         app:layout_constraintBottom_toTopOf="@id/activity_sign_up__submitRegistrationButton"
-        app:layout_constraintStart_toStartOf="@+id/activity_sign_up__guideLine1"
-        app:layout_constraintEnd_toEndOf="@+id/activity_sign_up__guideLine2" />
+        app:layout_constraintStart_toStartOf="@id/activity_sign_up__guideLine1"
+        app:layout_constraintEnd_toEndOf="@id/activity_sign_up__guideLine2"
+        app:passwordToggleEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/activity_sign_up__confirmPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/light_gray"
+            android:maxLength="50"
+            android:background="@drawable/custom_input"
+            android:hint="@string/confirm_password_hint"
+            android:inputType="textPassword" />
+    </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:id="@+id/activity_sign_up__submitRegistrationButton"
@@ -100,10 +117,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/submit_registration_button_text"
+        android:layout_marginTop="20dp"
         android:layout_marginBottom="70dp"
         app:layout_constraintEnd_toEndOf="@+id/activity_sign_up__guideLine2"
         app:layout_constraintStart_toStartOf="@+id/activity_sign_up__guideLine1"
-        app:layout_constraintTop_toBottomOf="@id/activity_sign_up__ConfirmPassword"
+        app:layout_constraintTop_toBottomOf="@id/activity_sign_up__confirmPasswordLayout"
         app:layout_constraintBottom_toTopOf="@+id/activity_sign_up__toSignInActivity" />
 
     <TextView
