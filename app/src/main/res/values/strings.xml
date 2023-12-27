@@ -1,9 +1,10 @@
 <resources>
     <string name="app_name">Hotels</string>
+
+    <!-- auth -->
     <string name="sign_up_screen_title">Регистрация</string>
     <string name="sign_in_screen_title">Вход</string>
     <string name="login_hint">Введите почту</string>
-    <string name="surname_hint">Введите фамилию</string>
     <string name="name_hint">Введите имя</string>
     <string name="password_hint">Введите пароль</string>
     <string name="confirm_password_hint">Подтвердите пароль</string>
@@ -12,4 +13,44 @@
     <string name="submit_sign_in_button_text">Войти</string>
     <string name="to_sign_up_text">Еще нет аккаунта? Зарегистрироваться</string>
     <string name="sign_out_button_text">Выйти</string>
+
+    <!-- home_screen -->
+    <string name="account_ic_hint">Информация об аккаунте</string>
+    <string name="search_hint">Поиск</string>
+    <string name="favourites_ic_hint">Добавить в избранное</string>
+    <string name="show_booking_button_text">Бронирования</string>
+    <string name="show_favourites_button_text">Избранное</string>
+
+    <!-- hotel_info -->
+    <string name="feedback_section_title">Отзывы</string>
+    <string name="booking_section_title">Бронирование</string>
+    <string name="checkin_checkout_hint">Заезд - Выезд</string>
+    <string name="checkout_hint">Выезд</string>
+    <string name="book_button_text">Забронировать</string>
+    <string name="feedback_hint">Оставьте свой отзыв</string>
+    <string name="leave_feedback_button_text">Отправить отзыв</string>
+
+    <!-- show_favourites -->
+    <string name="favourites_title">Избранное</string>
+
+    <!-- show_booking -->
+    <string name="booking_item_button_text">Удалить</string>
+    <string name="nothing_to_show">Ничего не забронировано</string>
+
+    <!-- admin_panel  -->
+    <string name="add_hotel_button_text">Добавить отель</string>
+    <string name="edit_hotel_button_text">Изменить отель</string>
+    <string name="remove_hotel_button_text">Удалить отель</string>
+    <string name="hotel_name_hint">Введите название отеля</string>
+    <string name="hotel_cost_hint">Введите стоимость отеля</string>
+    <string name="hotel_feedback_quantity_hint">Введите количество отзывов отеля</string>
+    <string name="hotel_grade_hint">Введите оценку отеля</string>
+    <string name="hotel_image_hint">Введите изображение отеля</string>
+
+    <string name="edit_hotel_name_hint">Введите новое название отеля</string>
+    <string name="edit_hotel_cost_hint">Введите новую стоимость отеля</string>
+    <string name="edit_hotel_feedback_quantity_hint">Введите новое количество отзывов отеля</string>
+    <string name="edit_hotel_grade_hint">Введите новую оценку отеля</string>
+    <string name="edit_hotel_image_hint">Введите новое изображение отеля</string>
+    <string name="home_button_text">Домой</string>
 </resources>

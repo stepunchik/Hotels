@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".account.ShowFavourites">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/activity_show_favourites__guideLine1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="13dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/activity_show_favourites__guideLine2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="13dp" />
+
+    <TextView
+        android:id="@+id/activity_show_favourites__title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:layout_marginTop="34dp"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:text="@string/favourites_title"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/activity_show_favourites__recyclerView"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/activity_show_favourites__recyclerView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingTop="34dp"
+        android:paddingBottom="82dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintEnd_toStartOf="@id/activity_show_favourites__guideLine2"
+        app:layout_constraintStart_toEndOf="@id/activity_show_favourites__guideLine1"
+        app:layout_constraintTop_toBottomOf="@id/activity_show_favourites__title"
+        tools:listitem="@layout/hotel_item" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

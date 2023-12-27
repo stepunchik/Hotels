@@ -16,15 +16,28 @@
         android:theme="@style/Theme.Hotels"
         tools:targetApi="31">
         <activity
-            android:name=".SignUpActivity"
-            android:windowSoftInputMode="adjustResize"
+            android:name=".admin.RemoveHotel"
             android:exported="false" />
         <activity
-            android:name=".SignInActivity"
-            android:windowSoftInputMode="adjustResize"
+            android:name=".admin.EditHotel"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".admin.AddHotel"
+            android:exported="false" />
+        <activity
+            android:name=".admin.AdminPanel"
+            android:exported="false" />
+        <activity
+            android:name=".account.ShowFavourites"
+            android:exported="false" />
+        <activity
+            android:name=".home.HotelInfo"
+            android:exported="false" />
+        <activity
+            android:name=".account.ShowBooking"
+            android:exported="false" />
+        <activity
+            android:name=".home.HomeScreenActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -32,6 +45,17 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".authentication.SignUpActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".authentication.SignInActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".account.AccountInfo"
+            android:exported="true" />
     </application>
 
 </manifest>

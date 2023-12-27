@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".admin.AddHotel">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/activity_add_hotel__guideLine1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="13dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/activity_add_hotel__guideLine2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="13dp" />
+    
+    <TextView
+        android:id="@+id/activity_add_hotel__title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="25sp"
+        android:textColor="@color/black"
+        android:layout_marginBottom="20dp"
+        android:text="@string/add_hotel_button_text"
+        app:layout_constraintBottom_toTopOf="@id/activity_add_hotel__hotelImage"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/activity_add_hotel__guideLine1"
+        app:layout_constraintEnd_toStartOf="@id/activity_add_hotel__guideLine2"
+        app:layout_constraintVertical_chainStyle="packed"/>
+
+    <ImageView
+        android:id="@+id/activity_add_hotel__hotelImage"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:contentDescription="@string/hotel_image_hint"
+        android:src="@drawable/baseline_add_photo_alternate_24"
+        app:layout_constraintTop_toBottomOf="@+id/activity_add_hotel__title"
+        app:layout_constraintBottom_toTopOf="@id/activity_add_hotel__hotelName"
+        app:layout_constraintStart_toEndOf="@id/activity_add_hotel__guideLine1"
+        app:layout_constraintEnd_toStartOf="@id/activity_add_hotel__guideLine2"  />
+
+    <EditText
+        android:id="@+id/activity_add_hotel__hotelName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:autofillHints="name"
+        android:hint="@string/hotel_name_hint"
+        app:layout_constraintTop_toBottomOf="@+id/activity_add_hotel__hotelImage"
+        app:layout_constraintBottom_toTopOf="@id/activity_add_hotel__hotelCost"
+        app:layout_constraintStart_toEndOf="@id/activity_add_hotel__guideLine1"
+        app:layout_constraintEnd_toStartOf="@id/activity_add_hotel__guideLine2"  />
+
+    <EditText
+        android:id="@+id/activity_add_hotel__hotelCost"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:autofillHints="name"
+        android:hint="@string/hotel_cost_hint"
+        app:layout_constraintTop_toBottomOf="@+id/activity_add_hotel__hotelName"
+        app:layout_constraintBottom_toTopOf="@id/activity_add_hotel__feedbackQuantity"
+        app:layout_constraintStart_toEndOf="@id/activity_add_hotel__guideLine1"
+        app:layout_constraintEnd_toStartOf="@id/activity_add_hotel__guideLine2"  />
+
+    <EditText
+        android:id="@+id/activity_add_hotel__feedbackQuantity"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:autofillHints="name"
+        android:hint="@string/hotel_feedback_quantity_hint"
+        app:layout_constraintTop_toBottomOf="@+id/activity_add_hotel__hotelCost"
+        app:layout_constraintBottom_toTopOf="@id/activity_add_hotel__hotelGrade"
+        app:layout_constraintStart_toEndOf="@id/activity_add_hotel__guideLine1"
+        app:layout_constraintEnd_toStartOf="@id/activity_add_hotel__guideLine2"  />
+
+    <EditText
+        android:id="@+id/activity_add_hotel__hotelGrade"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:autofillHints="name"
+        android:hint="@string/hotel_grade_hint"
+        app:layout_constraintTop_toBottomOf="@+id/activity_add_hotel__feedbackQuantity"
+        app:layout_constraintBottom_toTopOf="@id/activity_add_hotel__addHotel"
+        app:layout_constraintStart_toEndOf="@id/activity_add_hotel__guideLine1"
+        app:layout_constraintEnd_toStartOf="@id/activity_add_hotel__guideLine2"  />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/activity_add_hotel__addHotel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:text="@string/add_hotel_button_text"
+        android:layout_marginTop="20dp"
+        app:layout_constraintBottom_toTopOf="@id/activity_add_hotel__goBack"
+        app:layout_constraintTop_toBottomOf="@id/activity_add_hotel__hotelGrade"
+        app:layout_constraintStart_toEndOf="@id/activity_add_hotel__guideLine1"
+        app:layout_constraintEnd_toStartOf="@id/activity_add_hotel__guideLine2" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/activity_add_hotel__goBack"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:text="@string/home_button_text"
+        android:layout_marginTop="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/activity_add_hotel__addHotel"
+        app:layout_constraintStart_toEndOf="@id/activity_add_hotel__guideLine1"
+        app:layout_constraintEnd_toStartOf="@id/activity_add_hotel__guideLine2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

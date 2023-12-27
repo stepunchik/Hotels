@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/lightest_gray"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".account.AccountInfo">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_element_border"
+        android:padding="20dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+        <ImageView
+            android:id="@+id/activity_account_info__accountImage"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@drawable/baseline_account_circle_24"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/activity_account_info__userName"
+            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="@string/account_ic_hint"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <TextView
+            android:id="@+id/activity_account_info__userName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="20dp"
+            android:contentDescription="@string/account_ic_hint"
+            tools:text="Имя пользователя"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/activity_account_info__accountImage"
+            app:layout_constraintBottom_toTopOf="@id/activity_account_info__userEmail" />
+
+        <TextView
+            android:id="@+id/activity_account_info__userEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:layout_marginBottom="80dp"
+            tools:text="Почта"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/activity_account_info__userName"
+            app:layout_constraintBottom_toTopOf="@id/activity_account_info__showBooking" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/activity_account_info__showBooking"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            app:backgroundTint="@color/button_gray"
+            app:icon="@drawable/baseline_hotel_24"
+            app:iconTint="@color/black"
+            app:iconSize="25dp"
+            android:minWidth="48dp"
+            android:minHeight="48dp"
+            android:textColor="@color/black"
+            android:text="@string/show_booking_button_text"
+            android:textAlignment="textStart"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/activity_account_info__userEmail"
+            app:layout_constraintBottom_toTopOf="@id/activity_account_info__showFavourites"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/activity_account_info__showFavourites"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            app:backgroundTint="@color/button_gray"
+            app:icon="@drawable/baseline_favorite_24"
+            app:iconTint="@color/black"
+            app:iconSize="25dp"
+            android:minWidth="48dp"
+            android:minHeight="48dp"
+            android:textColor="@color/black"
+            android:text="@string/show_favourites_button_text"
+            android:textAlignment="textStart"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/activity_account_info__signOut"
+            app:layout_constraintTop_toBottomOf="@id/activity_account_info__showBooking" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/activity_account_info__signOut"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            app:backgroundTint="@color/button_gray"
+            app:icon="@drawable/baseline_logout_24"
+            app:iconTint="@color/black"
+            app:iconSize="25dp"
+            android:minWidth="48dp"
+            android:minHeight="48dp"
+            android:textColor="@color/black"
+            android:text="@string/sign_out_button_text"
+            android:textAlignment="textStart"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/activity_account_info__showFavourites" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
